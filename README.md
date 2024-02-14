@@ -13,7 +13,6 @@ Welcome to the Docker Project for deploying a PHP application with MySQL databas
     - 📄 `index.php`: Main PHP file for the application
     - (Other PHP files and assets for your application)
 - 📁 **db**: Contains SQL files and execute script for MySQL setup
-    - 📄 `execute.sh`:  ⭐ Script for copying SQL files to MySQL directory and importing them into the database 
     - 📄 `example.sql`: Example SQL file (add your own SQL files here)
 - 📄  `docker-compose`: ⭐ Source code to automate the backup files
  
