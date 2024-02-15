@@ -8,13 +8,13 @@ Welcome to the Docker Project for deploying a PHP application with MySQL databas
 
 ## 📂 Project Structure
 
-- 📁 **App**: Contains the PHP application files
+- 📁 **www**: Contains the PHP application files
     - 📄 `Dockerfile`: Dockerfile for building the customized PHP application with Apache server for installing extension
     - 📄 `index.php`: Main PHP file for the application
     - (Other PHP files and assets for your application)
-- 📁 **db**: Contains SQL files and execute script for MySQL setup
+- 📁 **database**: Contains SQL files and execute script for MySQL setup
     - 📄 `example.sql`: Example SQL file (add your own SQL files here)
-- 📄 `execute.sh`:  ⭐ Script for creating a database based on filename
+- 📄  `execute.sh`:  ⭐ Script for creating a database based on filename
 - 📄  `docker-compose`: ⭐ Source code to automate the backup files
  
 ⭐ - Indicates it require changes, in that file the specific line is commented as "^_^", followed by a comment about changes
@@ -37,13 +37,15 @@ To run this Docker project locally, follow these steps:
     ```
 
 2. **Build and Run the Docker Containers:**
+    - Make sure to give permissions, execute the bash file
     ```bash
-    docker-compose up --build
+    chmod +x import.sh
+    ./import.sh
     ```
 
 3. **Access the Services:**
    - PHP Application: [http://localhost:80](http://localhost:80)
-   - phpMyAdmin: [http://localhost:8080](http://localhost:8080)
+   - phpMyAdmin: [http://localhost:8081](http://localhost:8081)
    - MySQL Database (accessible internally)
 
 ## 🧰 Prerequisites
