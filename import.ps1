@@ -1,4 +1,3 @@
-```powershell
 # Directory containing your .sql files
 $SQL_FILES_DIR = "C:\path\to\Docker_Project\database"
 
@@ -31,4 +30,3 @@ Write-Host "Initiating docker sequence, docker ......"
 
 # Initiate Docker Compose
 docker-compose up -d --build
-```
