@@ -11,7 +11,7 @@ Get-ChildItem $SQL_FILES_DIR -Filter *.sql | ForEach-Object {
 
     # Create the SQL statements to prepend
     Write-Host "Creating and switching to database '$filename'"
-    $prepend_statements = "CREATE DATABASE IF NOT EXISTS $filename;" + "nUSE $filename;" + "n"
+    $prepend_statements = "CREATE DATABASE IF NOT EXISTS $filename;" + "USE $filename;"
     
     $tmp_file = Join-Path $TMP_DIR "$filename.sql"
 
