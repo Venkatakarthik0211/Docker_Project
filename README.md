@@ -14,7 +14,8 @@ Welcome to the Docker Project for deploying a PHP application with MySQL databas
     - (Other PHP files and assets for your application)
 - 📁 **database**: Contains SQL files and execute script for MySQL setup
     - 📄 `example.sql`: Example SQL file (add your own SQL files here)
-- 📄  `execute.sh`:  ⭐ Script for creating a database based on filename
+- 📄  `import.sh`:  ⭐ DEBIAN/UBUNTU Script to prepend CREATE and USE queries a database based on filename
+- 📄 - `import.ps1` ⭐ Windows Script for creating a database based on filename
 - 📄  `docker-compose`: ⭐ Source code to automate the backup files
  
 ⭐ - Indicates it require changes, in that file the specific line is commented as "^_^", followed by a comment about changes
@@ -36,11 +37,18 @@ To run this Docker project locally, follow these steps:
     cd Docker_Project
     ```
 
-2. **Build and Run the Docker Containers:**
-    - Make sure to give permissions, execute the bash file
+2. **Build and Run the Docker Containers on Linux:**
+    - Make sure to give permissions, execute the bash file for linux
     ```bash
     chmod +x import.sh
     ./import.sh
+    ```
+2. **Build and Run the Docker Containers:**
+    - Make sure to give permissions, execute the bash file for Windows
+    ```powershell
+    Set-ExecutionPolicy RemoteSigned  # Run as Administrator if necessary
+    cd C:\path\to\your\script\directory
+    .\import.ps1
     ```
 
 3. **Access the Services:**
